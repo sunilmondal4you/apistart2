@@ -23,11 +23,15 @@ app.get("/a/b", function(req, res){
 });
 
 app.get("/a/b/c", function(req, res){
-    res.send("what are you doing?");
+    var name=query.name;
+
+    res.send("what are you doing?" + name);
 });
 
 app.post("/a", function(req, res){
-    res.send("We wellcome you.");
+    var place=query.place;
+    var name=query.name;
+    res.send("We wellcome you. :" + place + " " + name + "." );
 });
 
 app.post("/b", function(req, res){
