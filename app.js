@@ -14,6 +14,10 @@ app.get("/a", function(req, res){
     res.send("We wellcome...");
 });
 
+app.post("/a", function(req, res){
+    res.send("We wellcome you.");
+});
+
 app.listen(3000, function () {
     console.log("Server Started");
 });
