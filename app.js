@@ -38,6 +38,10 @@ app.post("/a/b", function(req, res){
     res.send("I am from West Bengal.");
 });
 
+app.post("/a/b/c", function(req, res){
+    res.send("I am doing web designing");
+});
+
 app.listen(3000, function () {
     console.log("Server Started");
 });
