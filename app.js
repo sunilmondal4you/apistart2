@@ -35,7 +35,7 @@ app.get("/a/b/c", function(req, res){
 app.post("/a", function(req, res){
 
     var reqjson = req.body;
-    res.send("We wellcome you. :" + reqjson.name + " " + reqjson.email + "." );
+    res.send("We wellcome you. :" + reqjson.name + " " + reqjson.email +" "+ reqjson.place + "." );
 });
 
 app.post("/b", function(req, res){
@@ -47,6 +47,7 @@ app.post("/a/b", function(req, res){
 });
 
 app.post("/a/b/c", function(req, res){
+    var reqjson = req.body;
     res.send("I am doing web designing");
 });
 
