@@ -4,7 +4,11 @@
 
 var express= require("express");
 
+var bodyParser = require('body-parser');
+
 var app= new express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", function(req, res){
     res.send("Hello");
@@ -29,9 +33,9 @@ app.get("/a/b/c", function(req, res){
 });
 
 app.post("/a", function(req, res){
-    var place=query.place;
-    var name=query.name;
-    res.send("We wellcome you. :" + place + " " + name + "." );
+
+    var reqjson = req.body;
+    res.send("We wellcome you. :" + reqjson.name + " " + reqjson.email + "." );
 });
 
 app.post("/b", function(req, res){
